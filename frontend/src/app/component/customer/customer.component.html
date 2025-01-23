@@ -1,0 +1,43 @@
+<div class="user-account">
+  <h2>Личный кабинет</h2>
+  <div class="user-info">
+    <p><strong>Имя:</strong> {{ customerInfo?.name }}</p>
+    <p><strong>Email:</strong> {{ customerInfo?.email }}</p>
+    <p><strong>Город:</strong> {{ customerInfo?.city }}</p>
+    <p><strong>Телефон:</strong> {{ customerInfo?.phoneNumber }}</p>
+  </div>
+
+  <div class="buttons">
+    <button class="btn-edit-profile" routerLink="/edit-profile">
+      <i class="fas fa-user-edit"></i> Редактировать профиль
+    </button>
+    <button class="btn-change-password" routerLink="/change-password">
+      <i class="fas fa-key"></i> Изменить пароль
+    </button>
+    <button class="btn-logout" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i> Выйти
+    </button>
+    <button class="btn-cart" routerLink="/cart">
+      <i class="fas fa-shopping-cart"></i> Корзина
+    </button>
+  </div>
+
+  <div class="order-history">
+    <h3>История заказов</h3>
+    <ul>
+      <li *ngFor="let order of displayedOrders">
+        <p><strong>Имя клиента:</strong> {{ order.customerName }}</p>
+        <p><strong>Дата и время заказа:</strong> {{ order.dateTime | date:'medium' }}</p>
+        <p><strong>Итоговая сумма:</strong> {{ order.totalPrice }} ₽</p>
+      </li>
+    </ul>
+    <div *ngIf="orders.length > 3">
+      <button class="toggle-button" (click)="toggleShowAllOrders()">
+        {{ showAllOrders ? 'Скрыть' : 'Ещё' }}
+      </button>
+    </div>
+    <div *ngIf="orders.length === 0">
+      <p>Заказы не найдены</p>
+    </div>
+  </div>
+</div>

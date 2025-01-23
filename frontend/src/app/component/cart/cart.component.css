@@ -1,0 +1,80 @@
+.cart-container {
+  padding: 40px 20px;
+  background-color: #E4E5EA; /* Фоновый цвет */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  min-height: 61vh;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #E4E5EA; /* Цвет границы элемента корзины */
+  border-radius: 4px; /* Скругление углов элементов корзины */
+  background-color: #d2d2d4; /* Светлый фон для элементов корзины */
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0C151C; /* Цвет текста для деталей товара */
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.item-actions button {
+  background-color: #16354D; /* Основной цвет фона кнопок действий */
+  color: #fff; /* Цвет текста кнопок действий */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.item-actions button:hover {
+  background-color: #6B99C3; /* Цвет фона кнопок действий при наведении */
+}
+
+.checkout-btn {
+  background-color: #16354D; /* Цвет фона кнопки оформления заказа */
+  color: #fff; /* Цвет текста кнопки оформления заказа */
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  display: block; /* Кнопка занимает всю доступную ширину */
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #6B99C3; /* Цвет фона кнопки оформления заказа при наведении */
+}
+
+.quantity-btn {
+  background-color: #16354D; /* Цвет фона кнопок изменения количества */
+  color: #fff; /* Цвет текста кнопок изменения количества */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+  background-color: #6B99C3; /* Цвет фона кнопок изменения количества при наведении */
+}

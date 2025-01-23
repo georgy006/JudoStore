@@ -1,0 +1,95 @@
+/* styles.css */
+
+.contacts {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.contacts .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contacts p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contacts ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contacts ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contacts h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts label {
+    font-size: 18px;
+}
+
+.contacts input, .contacts textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contacts button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacts button:hover {
+    background-color: #0056b3;
+}
+
+.contacts .map {
+    margin-bottom: 20px;
+}
+
+.contacts .socials {
+    display: flex;
+    gap: 20px;
+}
+
+.contacts .socials a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.contacts .socials a:hover {
+    color: #0056b3;
+}

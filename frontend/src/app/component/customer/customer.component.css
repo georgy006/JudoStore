@@ -1,0 +1,98 @@
+.user-account {
+  padding: 40px 20px;
+  background-color: #E4E5EA; /* Фоновый цвет */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.user-account h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0C151C; /* Цвет заголовка */
+}
+
+.user-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #0C151C; /* Цвет текста */
+}
+
+.user-info p strong {
+  font-weight: bold;
+  color: #16354D; /* Цвет выделенного текста */
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttons .btn-edit-profile,
+.buttons .btn-change-password,
+.buttons .btn-logout,
+.buttons .btn-cart {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #16354D; /* Основной цвет кнопок */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.buttons .btn-edit-profile:hover,
+.buttons .btn-change-password:hover,
+.buttons .btn-logout:hover,
+.buttons .btn-cart:hover {
+  background-color: #6B99C3; /* Цвет при наведении */
+}
+
+.buttons i {
+  margin-right: 10px;
+  color: #D2D2D4; /* Цвет иконок */
+}
+
+.order-history {
+  margin-top: 30px;
+}
+
+.order-history h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #0C151C; /* Цвет заголовка истории заказов */
+}
+
+.order-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-history li {
+  background-color: #D2D2D4; /* Цвет фона элементов заказа */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.order-history p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #0C151C; /* Цвет текста в элементах заказа */
+}
+
+.toggle-button {
+  text-decoration: underline;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #16354D; /* Цвет кнопки "Ещё/Скрыть" */
+}

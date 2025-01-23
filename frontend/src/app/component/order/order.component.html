@@ -1,0 +1,31 @@
+<div class="order-container">
+  <div *ngIf="order" class="order-content">
+    <h2>Информация о заказе</h2>
+    <div class="order-detail">
+      <p><strong>Имя клиента:</strong> {{ order.customerName }}</p>
+      <p><strong>Дата и время заказа:</strong> {{ order.dateTime | date:'medium' }}</p>
+    </div>
+    <div class="order-items">
+      <h3>Товары:</h3>
+      <ul>
+        <li *ngFor="let item of order.orderItemDtos">
+          <div class="order-item">
+            <p><strong>Название продукта:</strong> {{ item.productDto.productName }}</p>
+            <p><strong>Категория:</strong> {{ item.productDto.category.name }}</p>
+            <p><strong>Цена:</strong> {{ item.productDto.price }} ₽</p>
+            <p><strong>Количество:</strong> {{ item.quantity }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="order-summary">
+      <p><strong>Итоговая сумма:</strong> {{ order.totalPrice }} ₽</p>
+    </div>
+    <button class="btn-back-home" routerLink="/">
+      <i class="fas fa-home"></i> Вернуться на главную
+    </button>
+  </div>
+  <div *ngIf="!order">
+    <p>Загрузка данных...</p>
+  </div>
+</div>

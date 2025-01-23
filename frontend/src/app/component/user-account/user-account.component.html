@@ -1,0 +1,42 @@
+<div class="user-account">
+  <h2>Личный кабинет</h2>
+  <div class="user-info">
+    <p><strong>Имя:</strong> {{ userInfo.name }}</p>
+    <p><strong>Email:</strong> {{ userInfo.email }}</p>
+    <p><strong>Город:</strong> {{ userInfo.city }}</p>
+    <p><strong>Номер телефона:</strong> {{ userInfo.phoneNumber }}</p>
+  </div>
+  <div class="buttons">
+    <button class="btn-edit-profile" routerLink="/edit-profile">
+      <i class="fas fa-user-edit"></i> Редактировать профиль
+    </button>
+    <button class="btn-change-password" routerLink="/change-password">
+      <i class="fas fa-key"></i> Изменить пароль
+    </button>
+    <button class="btn-logout" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i> Выйти
+    </button>
+    <button class="btn-cart" routerLink="/cart">
+      <i class="fas fa-shopping-cart"></i> Корзина
+    </button>
+  </div>
+  <div class="order-history">
+    <h3>История заказов</h3>
+    <ul>
+      <li *ngFor="let order of orderHistory">
+        <!-- <p><strong>Дата:</strong> {{ order.date | date }}</p> -->
+        <p><strong>Номер заказа:</strong> {{ order.id }}</p>
+        <!-- <p><strong>Сумма:</strong> {{ order.total | currency }}</p> -->
+      </li>
+    </ul>
+  </div>
+  <div class="favorites">
+    <h3>Избранные товары</h3>
+    <ul>
+      <li *ngFor="let item of favoriteItems">
+        <p>{{ item.name }}</p>
+        <button (click)="removeFromFavorites(item)">Удалить из избранного</button>
+      </li>
+    </ul>
+  </div>
+</div>

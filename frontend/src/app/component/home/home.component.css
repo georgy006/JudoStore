@@ -1,0 +1,45 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 77vh;
+  }
+  
+  .home-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку при уменьшении ширины экрана */
+  }
+  
+  .block {
+    flex: 1;
+    min-width: 250px; /* Устанавливает минимальную ширину блоков */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .block a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .block:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  .block h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+  }
+  
+  .block p {
+    font-size: 16px;
+  }
+  

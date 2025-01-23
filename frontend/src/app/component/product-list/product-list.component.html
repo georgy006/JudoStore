@@ -1,0 +1,60 @@
+<div class="product-container">
+    <aside class="sidebar">
+
+  
+      <!-- Блок для сортировки -->
+      <div class="sorting-controls">
+        <h2>Сортировка</h2>
+        <label>
+          <input type="radio" name="sortDirection" value="ASC" (change)="changeSortDirection('ASC')" [checked]="sortDirection === 'ASC'"> По возрастанию
+        </label>
+        <label>
+          <input type="radio" name="sortDirection" value="DESC" (change)="changeSortDirection('DESC')" [checked]="sortDirection === 'DESC'"> По убыванию
+        </label>
+        <label>
+          <input type="radio" name="sortByName" value="true" (change)="changeSortField(true)" [checked]="sortByName"> По имени
+        </label>
+        <label>
+          <input type="radio" name="sortByName" value="false" (change)="changeSortField(false)" [checked]="!sortByName"> По цене
+        </label>
+      </div>
+  
+      <!-- Блок для фильтрации -->
+      <div class="filter-controls">
+        <h2>Фильтр</h2>
+        <label>
+          Категория:
+          <select [(ngModel)]="selectedCategoryId" (change)="applyFilter()">
+            <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+          </select>
+        </label>
+        <label>
+          Мин. цена:
+          <input type="number" [(ngModel)]="minPrice" (change)="applyFilter()">
+        </label>
+        <label>
+          Макс. цена:
+          <input type="number" [(ngModel)]="maxPrice" (change)="applyFilter()">
+        </label>
+        <button class="btn" (click)="resetFilter()">Сбросить фильтр</button>
+      </div>
+
+    </aside>
+  
+    <section class="products">
+      <div *ngFor="let product of products" class="product-info">
+        <div class="product">
+          <img [src]="'assets/' + product.category.name + '.png'">
+          <div class="product-info">
+            <h3>{{ product.productName }}</h3>
+            <p>Цена: {{ product.price | currency:'RUB ' }}</p>
+            <p>Количество на складе: {{ product.stockQuantity }}</p>
+            <button class="btn" (click)="addToCart(product, 1)">
+              <i class="fas fa-shopping-cart"></i> Добавить в корзину
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
